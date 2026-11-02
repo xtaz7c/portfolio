@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import "./App.css";
+import Home from "./pages/Home/Home";
 
 function App() {
    return (
@@ -7,7 +7,7 @@ function App() {
          <div className="app__header">
             <Header />
          </div>
-         <main id="inicio" className="app__main wrapper"></main>
+         <Home />
       </div>
    );
 }

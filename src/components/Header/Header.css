@@ -1,33 +1,46 @@
 .header {
-  height: 8vh;
-  width: 100%;
-  margin: auto;
-  padding: 0 15%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  position: relative;
-  border-bottom: 1px var(--border-03);
-}
-.box-left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.brand {
-  font-size: 1.18rem;
-  font-weight: 800;
-  letter-spacing: -0.07em;
-  white-space: nowrap;
-}
-.brand span {
-  color: var(--hl-01);
+   width: min(100% - 3rem, var(--content-width));
+   min-height: 76px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem;
+   margin-inline: auto;
 }
 
-.header-right{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+.brand {
+   color: var(--text-01);
+   font-size: 1.15rem;
+   font-weight: 800;
+   letter-spacing: -0.07em;
+   white-space: nowrap;
+}
+
+.brand span {
+   color: var(--hl-01);
+}
+
+.header-right {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: clamp(1rem, 3vw, 2.25rem);
+}
+
+@media (max-width: 560px) {
+   .header {
+      width: min(100% - 2rem, var(--content-width));
+      min-height: 68px;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+      padding-block: 0.8rem;
+   }
+
+   .header-right {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0.75rem;
+   }
 }

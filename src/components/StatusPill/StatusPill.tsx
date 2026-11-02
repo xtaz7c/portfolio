@@ -4,7 +4,7 @@ type StatusPillProps = {
    label?: string;
 };
 
-function StatusPill({ label = "Online" }: StatusPillProps) {
+function StatusPill({ label = "Em construção" }: StatusPillProps) {
    return (
       <span className="status-pill">
          <span className="status-pill__dot" aria-hidden="true" />
