@@ -1,13 +1,20 @@
 .status-pill {
+   padding: 0.25rem 0.75rem;
+   color: var(--text-02);
+   white-space: nowrap;
    display: inline-flex;
    align-items: center;
    gap: 0.5rem;
-   padding: 0.25rem 0.75rem;
-   border: 1px solid var(--color-border);
-   border-radius: var(--radius-full);
-   color: var(--text-02);
    font-size: var(--font-size-sm);
-   white-space: nowrap;
+   border-radius: var(--radius-full);
+   border: 1px solid rgba(0, 255, 72, 0.24);
+   background: rgba(0, 255, 72, 0.12);
+}
+.status-pill__label {
+   font-family: monospace;
+   font-size: 0.65rem;
+   font-weight: 600;
+   color: rgba(133, 255, 168, 0.75);
 }
 
 .status-pill__dot {
@@ -16,4 +23,19 @@
    border-radius: var(--radius-full);
    background: var(--hl-03);
    box-shadow: var(--shadow-03);
+   animation: pulse 3s infinite;
+}
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+      opacity: 1;
+   }
+   50% {
+      transform: scale(1);
+      opacity: 0.25;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
 }
