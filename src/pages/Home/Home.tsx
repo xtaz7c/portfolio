@@ -118,8 +118,9 @@ function FutureGameCard() {
    );
 }
 
+const currentYear = new Date().getFullYear();
+
 function Home() {
-   const currentYear = new Date().getFullYear();
    const [activeFilter, setActiveFilter] = useState<Filter>("Todos");
 
    const visibleProjects = useMemo(
