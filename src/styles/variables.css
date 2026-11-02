@@ -1,78 +1,53 @@
 :root {
-    /* ====== BACKGROUND ===== */
+   /* Base palette */
+   --color-black: #000000;
+   --color-white: #ffffff;
+   --color-purple: #7c3aed;
+   --color-purple-light: #a78bfa;
+   --color-purple-dark: #5b21b6;
+   --color-purple-darker-01: rgba(77, 29, 149, 0.75);
+   --color-purple-darker-02: rgba(77, 29, 149, 0.32);
+
+   /* Backgrounds */
+   --bg-01: #000000;
+   --bg-02: #101014;
+   --bg-03: #18181d;
    --bg-01-transparent: rgba(0, 0, 0, 0.25);
    --bg-02-transparent: rgba(0, 0, 0, 0.5);
    --bg-03-transparent: rgba(0, 0, 0, 0.6);
    --bg-04-transparent: rgba(0, 0, 0, 0.75);
    --bg-05-transparent: rgba(0, 0, 0, 1);
 
-   /* ====== COLORS ======*/
-   --bg-01: #000;
-   --bg-02: #181818;
+   /* Text */
+   --text-01: #ffffff;
+   --text-02: rgba(255, 255, 255, 0.72);
+   --text-03: rgba(255, 255, 255, 0.45);
 
-   /* ====== COLORS ======*/
-   --text-01: rgb(255, 255, 255);
-   --text-02: rgba(255, 255, 255, 0.75);
+   /* Purple highlight scale */
+   --hl-01: var(--color-purple);
+   --hl-02: var(--color-purple-light);
+   --hl-03: #c4b5fd;
+   --hl-01-transparent: rgba(124, 58, 237, 0.28);
+   --hl-02-transparent: rgba(124, 58, 237, 0.08);
 
-   /* ====== HIGHLIGHT ===== */
-   --hl-01: #25d0ff;
-   --hl-02: #76defb;
-   --hl-03: #00ba69;
-   
-   --hl-01-transparent: rgba(120, 42, 255, 0.35);
-   --hl-02-transparent: rgba(124, 58, 237, 0.025);
+   /* Borders are colors, not partial border declarations */
+   --border-01: rgba(255, 255, 255, 0.75);
+   --border-02: rgba(255, 255, 255, 0.5);
+   --border-03: rgba(255, 255, 255, 0.2);
+   --border-04: rgba(255, 255, 255, 0.08);
 
-   /* ====== Border ===== */
-   --border-01: solid rgba(225, 225, 225, 0.75);
-   --border-02: solid rgba(225, 225, 225, 0.5);
-   --border-03: solid rgba(225, 225, 225, 0.25);
-   --border-04: solid rgba(225, 225, 225, 0.05);
-
-   /* ====== Blur ====== */
-   --blur-01: blur(4px);
-   --blur-02: blur(8px);
-   --blur-03: blur(12px);
-
-   --color-black: #000000;
-   --color-white: #ffffff;
-   --color-purple: #7c3aed;
-
-   /* Purple variations */
-   --color-purple-light: #a78bfa;
-   --color-purple-dark: #5b21b6;
-   --color-purple-darker-01: rgba(77, 29, 149, 0.75);
-   --color-purple-darker-02: rgba(77, 29, 149, 0.45);
-
-   /* Semantic colors */
+   /* Semantic aliases */
    --color-background: var(--bg-01);
-   --color-surface: #0f0f0f;
-   --color-surface-elevated: #181818;
+   --color-surface: var(--bg-02);
+   --color-surface-elevated: var(--bg-03);
+   --color-text: var(--text-01);
+   --color-text-muted: var(--text-02);
+   --color-border: var(--border-04);
+   --color-focus: var(--hl-02);
 
-   --color-text: var(--color-white);
-   --color-text-muted: #b3b3b3;
-
-   --color-border: #2a2a2a;
-   --color-focus: var(--color-purple);
-
-   /* Shadow */
-   --shadow-01: 0 0 18px rgba(167, 139, 250, 0.14);
-   --shadow-03: 0 0 18px rgba(0, 186, 105, 0.24);
-
-   /* ========================================
-      Typography
-      ======================================== */
-
-   --font-family-base:
-      'Manrope',
-      Inter,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      monospace,
-      "Roboto",
-      sans-serif;
-
+   /* Typography */
+   --font-family-base: "Manrope", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+   --font-family-mono: "DM Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
    --font-size-xs: 0.75rem;
    --font-size-sm: 0.875rem;
    --font-size-md: 1rem;
@@ -80,26 +55,24 @@
    --font-size-xl: 1.5rem;
    --font-size-2xl: 2rem;
 
-   /* ========================================
-      Layout
-      ======================================== */
+   /* Layout */
+   --content-width: 1180px;
+   --content-padding: 1.5rem;
 
-   --content-width: 1280px;
-   --content-padding: 1.25rem;
-
-   /* ========================================
-      Border Radius
-      ======================================== */
-
+   /* Radius */
    --radius-sm: 0.375rem;
    --radius-md: 0.5rem;
-   --radius-lg: 0.75rem;
+   --radius-lg: 0.875rem;
    --radius-full: 9999px;
 
-   /* ========================================
-      Transitions
-      ======================================== */
+   /* Effects */
+   --shadow-01: 0 0 28px rgba(124, 58, 237, 0.18);
+   --shadow-03: 0 0 18px rgba(124, 58, 237, 0.24);
+   --blur-01: blur(4px);
+   --blur-02: blur(8px);
+   --blur-03: blur(12px);
 
+   /* Motion */
    --transition-fast: 150ms ease;
    --transition-normal: 250ms ease;
 }
