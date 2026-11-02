@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "typecheck": "tsc -b",
+    "lint": "oxlint --deny-warnings",
+    "check": "npm run typecheck && npm run lint",
+    "prebuild": "npm run lint",
     "build": "tsc -b && vite build",
-    "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,5 +25,8 @@
     "oxlint": "^1.89.0",
     "typescript": "~7.0.2",
     "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
