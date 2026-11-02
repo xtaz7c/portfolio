@@ -1,12 +1,21 @@
 import "./Navegation.css";
 
-function Navegation() {
+type NavegationProps = {
+   isOpen: boolean;
+   onNavigate: () => void;
+};
+
+function Navegation({ isOpen, onNavigate }: NavegationProps) {
    return (
-      <nav className="navegation" aria-label="Navegação principal">
-         <a className="navegation__link" href="#sobre">Sobre</a>
-         <a className="navegation__link" href="#sites">Projetos</a>
-         <a className="navegation__link" href="#jogos">Jogos</a>
-         <a className="navegation__link" href="#contato">Contato</a>
+      <nav
+         id="main-navigation"
+         className={isOpen ? "navegation is-open" : "navegation"}
+         aria-label="Navegação principal"
+      >
+         <a className="navegation__link" href="#sobre" onClick={onNavigate}>Sobre</a>
+         <a className="navegation__link" href="#sites" onClick={onNavigate}>Projetos</a>
+         <a className="navegation__link" href="#jogos" onClick={onNavigate}>Jogos</a>
+         <a className="navegation__link" href="#contato" onClick={onNavigate}>Contato</a>
       </nav>
    );
 }
