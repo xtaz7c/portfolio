@@ -119,6 +119,7 @@ function FutureGameCard() {
 }
 
 function Home() {
+   const currentYear = new Date().getFullYear();
    const [activeFilter, setActiveFilter] = useState<Filter>("Todos");
 
    const visibleProjects = useMemo(
@@ -305,7 +306,7 @@ function Home() {
                <a className="brand" href="#inicio" aria-label="Yohanan DEV, voltar ao início">
                   Yohanan. DEV<span>_</span>
                </a>
-               <p>Feito com intenção <span>© {new Date().getFullYear()}</span></p>
+               <p>Feito com intenção <span>© {currentYear}</span></p>
                <a href="https://github.com/xtaz7c" target="_blank" rel="noreferrer">
                   GitHub <Icon icon={openOutline} />
                </a>
