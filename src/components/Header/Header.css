@@ -1,0 +1,8 @@
+.header{
+    height: 8vh;
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    position: fixed;
+    border-bottom: 1px solid var(--hl-01);
+}
